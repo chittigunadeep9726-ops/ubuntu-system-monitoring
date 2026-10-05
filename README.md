@@ -10,4 +10,4 @@ uptime, memory, disk usage, and the top 5 CPU processes.
 
 ## Author
 
-Your Name
+Gunadeep
