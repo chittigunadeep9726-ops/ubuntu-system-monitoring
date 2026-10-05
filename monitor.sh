@@ -11,3 +11,11 @@ df -h /
 echo ""
 echo "--- Top 5 CPU processes ---"
 ps aux --sort=-%cpu | head -6
+
+echo ""
+echo "--- GPU ---"
+if command -v nvidia-smi > /dev/null 2>&1; then
+    nvidia-smi --query-gpu=name,utilization.gpu,memory.used,memory.total,temperature.gpu --format=csv
+else
+    echo "No NVIDIA GPU found"
+fi
